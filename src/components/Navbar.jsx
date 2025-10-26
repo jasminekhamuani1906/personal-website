@@ -62,24 +62,24 @@ const Navbar = () => {
             ))}
 
             {/* Dark Mode Toggle */}
-            <button
+            {/* <button
               onClick={toggleDarkMode}
               className="text-xl hover:text-accent transition-colors focus:outline-none"
               aria-label="Toggle dark mode"
             >
               {darkMode ? <FaSun /> : <FaMoon />}
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Menu & Dark Mode Toggle */}
           <div className="md:hidden flex items-center space-x-4">
-            <button
+            {/* <button
               onClick={toggleDarkMode}
               className="text-xl hover:text-accent transition-colors focus:outline-none"
               aria-label="Toggle dark mode"
             >
               {darkMode ? <FaSun /> : <FaMoon />}
-            </button>
+            </button> */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-2xl focus:outline-none hover:text-accent transition-colors"
