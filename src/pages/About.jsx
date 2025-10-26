@@ -32,10 +32,9 @@ const About = () => {
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 I am an ambitious professional with a deep passion for mathematics and statistics,
                 currently pursuing MA Statistics at UC Berkeley. As a First-Class Honours graduate
-                in Actuarial Science from Heriot-Watt University, I bring a robust blend of
-                analytical skills and a strong academic foundation. My journey in actuarial science
-                has been marked by notable achievements, including multiple academic awards and
-                scholarships, reflecting my commitment to excellence.
+                in Actuarial Science from Heriot-Watt University, I bring a solid
+                analytical skills and a strong academic background. My journey in actuarial science
+                includes several academic awards and achievements, showing my dedication and hard work.
               </p>
             </div>
           </motion.section>
