@@ -57,7 +57,7 @@ const Projects = () => {
             Projects
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-            A collection of statistics and machine learning projects I've worked on
+            Here are the actuarial and machine learning projects I have worked on
           </p>
 
           {/* Projects Grid */}
