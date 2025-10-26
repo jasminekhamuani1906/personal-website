@@ -8,7 +8,7 @@ const Projects = () => {
       date: 'March 2025',
       description:
         'Analyzed 207K labeled pixels from NASA satellite imagery across 5 camera angles using correlation analysis and statistical testing to identify key patterns, then engineered spatial aggregation features from surrounding pixel neighborhoods and trained ensemble models (LightGBM, Random Forest, KNN), achieving 98.7% accuracy in correctly identifying clouds from white surfaces across 82K test pixels.',
-      link: 'https://www.overleaf.com/project',
+      link: 'https://drive.google.com/file/d/1eFuxsEbYsRHwyniHbCNzGB5YWbCrcu3f/view?usp=drive_link',
       tags: ['Python', 'Machine Learning', 'LightGBM', 'Random Forest', 'Statistical Testing'],
     },
     {
@@ -16,7 +16,7 @@ const Projects = () => {
       date: 'November 2024',
       description:
         'Developed Python package for adaptive rejection sampling using JAX automatic differentiation, implementing vectorized sampling from log-concave distributions with numerical validation.',
-      link: 'https://www.overleaf.com/project',
+      link: 'https://drive.google.com/file/d/1F2K-NMCrscpMYqewBhjGJkJzFeDYUOqd/view?usp=drive_link',
       tags: ['Python', 'JAX', 'Statistical Computing', 'Numerical Methods'],
     },
     {
@@ -24,7 +24,7 @@ const Projects = () => {
       date: 'May 2022',
       description:
         'Developed comprehensive analysis of DC and CDC pension plan designs for a 6,000-employee manufacturer, modeling cost implications to reduce employer contributions from 23% to 18% while maintaining benefits. Recommended CDC scheme as it provides fixed contributions for employers, reliable income for members, and allows collective risk-bearing. Analyzed investment strategies, mortality assumptions, and benefit structures to ensure cost certainty and better member outcomes than individual DC schemes.',
-      link: 'https://www.overleaf.com/project',
+      link: 'https://drive.google.com/file/d/1c4luE5Wq_QOv15oVlWec-2aydW_6s4Z-/view?usp=drive_link',
       tags: ['Actuarial Science', 'Pension Analysis', 'Risk Management', 'Financial Modeling'],
     },
   ];
