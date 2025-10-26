@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 
 const About = () => {
-  const funFacts = [
-    { label: 'Favorite Music', value: 'Indie Rock & Jazz' },
-    { label: 'Hobbies', value: 'Hiking, Reading, Cooking' },
-    { label: 'Based In', value: 'Berkeley, CA' },
-    { label: 'Fun Fact', value: 'I can solve a Rubik\'s cube in under 2 minutes!' },
-  ];
+  // const funFacts = [
+  //   { label: 'Favorite Music', value: 'Indie Rock & Jazz' },
+  //   { label: 'Hobbies', value: 'Hiking, Reading, Cooking' },
+  //   { label: 'Based In', value: 'Berkeley, CA' },
+  //   { label: 'Fun Fact', value: 'I can solve a Rubik\'s cube in under 2 minutes!' },
+  // ];
 
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-white dark:bg-gray-900 py-16">

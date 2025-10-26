@@ -84,7 +84,7 @@ const Teaching = () => {
             Teaching
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-            Empowering students to discover the beauty of mathematics and statistics through engaging,
+            Empowering students to discover the power of mathematics and statistics through engaging,
             accessible, and innovative teaching methods.
           </p>
 
