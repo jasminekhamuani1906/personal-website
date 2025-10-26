@@ -191,7 +191,7 @@ const About = () => {
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Soft Skills</h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Public Speaking, Teamwork, Leadership, Stakeholder Management, Problem-solving
+                  Public Speaking, Teamwork, Leadership, Stakeholder Management, Problem-solving, Critical Thinking, Attention To Detail
                 </p>
               </div>
             </div>
