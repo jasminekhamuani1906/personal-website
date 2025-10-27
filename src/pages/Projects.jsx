@@ -1,14 +1,25 @@
 import { motion } from 'framer-motion';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const projects = [
+    {
+      title: 'Health Insurance Premium Pricing Model',
+      date: 'October 2025',
+      description:
+        'Built end-to-end actuarial pricing model using GLM methodology on 1,338 real health insurance claims. Developed age curves, smoker differentials, and regional rating factors achieving 80.4% R² accuracy. Implemented credibility weighting, risk adjustment, and premium loading. Created interactive web-based calculator for real-time premium quotes.',
+      link: '/projects/health-insurance-pricing',
+      isInternal: true,
+      tags: ['Actuarial Science', 'GLM Modeling', 'Python', 'React', 'Rate Development', 'Pricing'],
+    },
     {
       title: 'Satellite Image Classification & Predictive Modeling',
       date: 'March 2025',
       description:
         'Analyzed 207K labeled pixels from NASA satellite imagery across 5 camera angles using correlation analysis and statistical testing to identify key patterns, then engineered spatial aggregation features from surrounding pixel neighborhoods and trained ensemble models (LightGBM, Random Forest, KNN), achieving 98.7% accuracy in correctly identifying clouds from white surfaces across 82K test pixels.',
       link: 'https://drive.google.com/file/d/1eFuxsEbYsRHwyniHbCNzGB5YWbCrcu3f/view?usp=drive_link',
+      isInternal: false,
       tags: ['Python', 'Machine Learning', 'LightGBM', 'Random Forest', 'Statistical Testing'],
     },
     {
@@ -17,6 +28,7 @@ const Projects = () => {
       description:
         'Developed Python package for adaptive rejection sampling using JAX automatic differentiation, implementing vectorized sampling from log-concave distributions with numerical validation.',
       link: 'https://drive.google.com/file/d/1F2K-NMCrscpMYqewBhjGJkJzFeDYUOqd/view?usp=drive_link',
+      isInternal: false,
       tags: ['Python', 'JAX', 'Statistical Computing', 'Numerical Methods'],
     },
     {
@@ -25,6 +37,7 @@ const Projects = () => {
       description:
         'Developed comprehensive analysis of DC and CDC pension plan designs for a 6,000-employee manufacturer, modeling cost implications to reduce employer contributions from 23% to 18% while maintaining benefits. Recommended CDC scheme as it provides fixed contributions for employers, reliable income for members, and allows collective risk-bearing. Analyzed investment strategies, mortality assumptions, and benefit structures to ensure cost certainty and better member outcomes than individual DC schemes.',
       link: 'https://drive.google.com/file/d/1c4luE5Wq_QOv15oVlWec-2aydW_6s4Z-/view?usp=drive_link',
+      isInternal: false,
       tags: ['Actuarial Science', 'Pension Analysis', 'Risk Management', 'Financial Modeling'],
     },
   ];
@@ -57,7 +70,7 @@ const Projects = () => {
             Projects
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-            Here are the actuarial and machine learning projects I have worked on
+            A collection of statistics and machine learning projects I've worked on
           </p>
 
           {/* Projects Grid */}
@@ -67,52 +80,67 @@ const Projects = () => {
             animate="visible"
             className="grid md:grid-cols-2 gap-8"
           >
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow"
-              >
-                {/* Project Header */}
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    {project.title}
-                  </h3>
-                  {project.link !== '#' && (
+            {projects.map((project, index) => {
+              const cardContent = (
+                <>
+                  {/* Project Header */}
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                      {project.title}
+                    </h3>
+                    {project.link !== '#' && !project.isInternal && (
+                      <FaExternalLinkAlt className="text-lg text-accent" />
+                    )}
+                  </div>
+
+                  {/* Date */}
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">{project.date}</p>
+
+                  {/* Description */}
+                  <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </>
+              );
+
+              return (
+                <motion.div
+                  key={index}
+                  variants={cardVariants}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-lg transition-shadow"
+                >
+                  {project.isInternal && project.link !== '#' ? (
+                    <Link to={project.link} className="block p-6 cursor-pointer">
+                      {cardContent}
+                    </Link>
+                  ) : project.link !== '#' ? (
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-accent hover:text-blue-600 transition-colors"
-                      aria-label={`View ${project.title}`}
+                      className="block p-6 cursor-pointer"
                     >
-                      <FaExternalLinkAlt className="text-lg" />
+                      {cardContent}
                     </a>
+                  ) : (
+                    <div className="p-6">{cardContent}</div>
                   )}
-                </div>
-
-                {/* Date */}
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">{project.date}</p>
-
-                {/* Description */}
-                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </motion.div>
         </motion.div>
       </div>
